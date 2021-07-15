@@ -35,9 +35,8 @@ window.onscroll = function() {
 }
 
 const StyledNav = styled.div`
-height: 10vh;
+height: 8vh;
 display: flex;
-width: 100%;
 align-items: center;
 justify-content: space-around;
 position: sticky;
@@ -69,6 +68,7 @@ nav {
         color: black;
         font-weight: bold;
         letter-spacing: 1px;
+        transition: 0.3s;
         &:hover{
             transform: scale(1.2);
         }

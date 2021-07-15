@@ -22,7 +22,7 @@ const AboutPage = () => {
 
 const StyledAboutPage = styled(motion.div)`
 height: 80vh;
-background:#2c2c2c;
+width: 80%;
 margin: auto;
 h1 {
     font-size: 4em;

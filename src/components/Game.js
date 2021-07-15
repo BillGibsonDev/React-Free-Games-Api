@@ -27,6 +27,7 @@ border-radius: 12px;
 padding: 12px;
 &:hover{
             transform: scale(1.1);
+            transition: 0.3s;
         }
     a   {
         color: #ffffff;

@@ -13,6 +13,7 @@ import Github from '../images/githubWhite.png';
 const Footer = () =>{
     return(
         <StyledFooter>
+            <div className="widthContainer">
             <div className="iconContainer">
                 <a href="https://linkedin.com"><img src={Linkedin} alt="company linkedin link" /></a>
                 <a href="https://facebook.com"><img src={Facebook} alt="company facebook link" /></a>
@@ -26,37 +27,47 @@ const Footer = () =>{
             />
             <button type="submit">Sign Up</button>
         </form>
+        </div>
         </StyledFooter>
     )
 }
 
 const StyledFooter = styled.div`
 height: 20vh;
+width: 100%;
 background: #8d8d8d;
 display: flex;
 align-items: center;
 justify-content: space-around;
 border-top-left-radius: 12px;
 border-top-right-radius: 12px;
-
 @media (max-width: 920px){
     flex-direction: column;
     height: 30vh;
   }
+  .widthContainer{
+      width: 70%;
+      display: flex;
+      justify-content: space-between; 
+      @media (max-width: 920px){
+        flex-direction: column;
+  }
+  
 .iconContainer {
     display: flex;
     width: 30%;
     align-items: center;
     @media (max-width: 920px){
-    width: 100%;
-    margin: auto;
-    justify-content: center;
+        width: 90%;
+        margin: auto;
+        justify-content: center;
     }
     img {
         margin: 0 10px;
         width: 50px;
         &:hover {
             transform: scale(1.2);
+            transition: 0.3s;
         }
     }
 }
@@ -65,10 +76,9 @@ form {
     display: flex;
     align-items: center;
     @media (max-width: 920px){
-    width: 100%;
-    margin: 4em auto;
-    justify-content: center;
-
+        width: 100%;
+        margin: 4em auto;
+        justify-content: center;
     }
     input {
         width: 70%;
@@ -78,6 +88,10 @@ form {
         font-weight: bold;
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
+        transition: 0.3s;
+        @media (max-width: 920px){
+            width: 100%auto;
+        }
         &:hover{
             border-radius: 8px;
             transform: scale(1.2);
@@ -88,17 +102,19 @@ form {
         height: 60px;
         border: none;
         margin-left: 2px;
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-weight: 700;
         background: white;
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
         cursor: pointer;
+        transition: 0.3s;
         &:hover{
             border-radius: 8px;
             transform: scale(1.2);
         }
     }
+}
 }
 `;
 

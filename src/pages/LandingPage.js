@@ -124,7 +124,8 @@ return(
 const StyledLandingPage = styled(motion.div)`
 height: 100%;
 font-size: 1em;
-background:#2c2c2c;
+width: 80%;
+margin: auto;
 h1{
     margin: 1em 1em;
     font-size: 4em;
