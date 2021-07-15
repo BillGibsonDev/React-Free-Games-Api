@@ -130,7 +130,7 @@ h1{
     margin: 1em 1em;
     font-size: 4em;
     border-bottom: 4px solid black;
-    width: 60%;
+    width: 90%;
     color: white;
     @media (max-width: 950px){
       width: 90%;
