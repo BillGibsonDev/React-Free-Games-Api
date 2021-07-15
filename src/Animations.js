@@ -7,6 +7,7 @@ export const pageAnimations = {
     show: {
         scale: 1,
         duration: 200,
+        delay: 1000,
     },
     exit: {
         scale: 0,

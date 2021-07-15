@@ -99,7 +99,7 @@ return(
             <button onClick={() =>{ getSortAlpha();}}>Alphabetical</button> 
             <button onClick={()=> { getRevelance();}}>Popular</button>
         </div>
-        <h1>{title}</h1>
+        <h1>{title} - Games Free to Play</h1>
         <div className="gameList">
             {data.map((data, key) => {
                 return (
@@ -131,6 +131,10 @@ h1{
     border-bottom: 4px solid black;
     width: 60%;
     color: white;
+    @media (max-width: 950px){
+      width: 90%;
+      font-size: 3em;
+    } 
     
 }
 .buttonContainer{
