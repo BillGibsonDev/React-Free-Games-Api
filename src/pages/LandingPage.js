@@ -179,7 +179,7 @@ h1{
 
 .gameList {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 3% auto;
   grid-row-gap: 5em;
   grid-column-gap: 2em;

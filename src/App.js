@@ -1,7 +1,3 @@
-import { useState } from 'react';
-
-// ....
-import axios from 'axios';
 
 // styles
 import GlobalStyles from './GlobalStyles.js';
