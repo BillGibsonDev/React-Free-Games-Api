@@ -17,87 +17,46 @@ import { pageAnimations }  from '../Animations.js';
 
 const LandingPage = () => {
   useEffect(() => {
-    getSortReleaseDate();
+    getGames();
   }, []);
 
 
     const [ data, setData ] = useState([]);
-    let [ title, setTitle ] = useState(false);
+    const [ title, setTitle ] = useState(false);
+    const [ select , setSelect ] = useState(false);
+
 
     let auth = {
         method: 'GET',
         url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
-        params: {'sort-by': 'release-date'},
+        params: {'sort-by': `${select}`},
         headers: {
           'x-rapidapi-key': '46b37b20a9msh92aed9be2b060a5p1cf061jsn211cc00eb274',
           'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
         }
       };
-    //
-      // get games by release
-      //
-    function getSortReleaseDate(){
+
+    function getGames(){
     axios.request(auth).then(function (response) {
       console.log(response.data);
-      setData(response.data);
-      setTitle('Release Date');
+      setData(response.data)
+      setSelect(document.getElementById('select').value);
+      setTitle(document.getElementById('select').value);
     }).catch(function (error) {
       console.error(error);
     });
     }
-    let auth3 = {
-        method: 'GET',
-        url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
-        params: {'sort-by': 'alphabetical'},
-        headers: {
-          'x-rapidapi-key': '46b37b20a9msh92aed9be2b060a5p1cf061jsn211cc00eb274',
-          'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
-        }
-      };
-    //
-    // get games by alphabetical
-    //
-    function getSortAlpha(){
-    axios.request(auth3).then(function (response) {
-      console.log(response.data);
-      setData(response.data);
-      setTitle('Alphabetical');
-    }).catch(function (error) {
-      console.error(error);
-    });
-    }
-    let auth4 = {
-        method: 'GET',
-        url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
-        params: { 'sort-by': `relevance`},
-        headers: {
-          'x-rapidapi-key': '46b37b20a9msh92aed9be2b060a5p1cf061jsn211cc00eb274',
-          'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
-        }
-      };
-    
-      //
-      // get popluar
-      //
-    function getRevelance(){
-    axios.request(auth4).then(function (response) {
-      console.log(response.data);
-      setData(response.data);
-      setTitle('Popular');
-    }).catch(function (error) {
-      console.error(error);
-      alert('Search error')
-    });
-    }
-
 
 return(
     <StyledLandingPage variants={pageAnimations} initial="hidden" animate='show' exit="exit" >
         <div className="buttonContainer" id="buttonContainer">
             <h2>Sort By:</h2>
-            <button onClick={() => { getSortReleaseDate();}} id="release">Release Date</button> 
-            <button onClick={() =>{ getSortAlpha();}}>Alphabetical</button> 
-            <button onClick={()=> { getRevelance();}}>Popular</button>
+            <select name="" id="select" onClick={() => {getGames(); }}>
+              <option value="relevance" onChange={getGames}>Popular</option>
+              <option value="release-Date" onChange={getGames}>Release Date</option>
+              <option value="alphabetical" onChange={getGames}>Alphabetical</option>
+            </select>
+            <button onClick={() => {getGames(); }}>Enter</button>
         </div>
         <h1>{title} - Games Free to Play</h1>
         <div className="gameList">
@@ -139,7 +98,7 @@ h1{
     
 }
 .buttonContainer{
-    margin: auto;
+    margin: 1em auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,6 +113,16 @@ h1{
         font-size: 4em;
       } 
     }
+    select{
+      width: 200px;
+      height: 40px;
+      margin-left: 1em;
+      font-size: 1.5em;
+  option{
+    width: 200px;
+    font-size: 1.5em;
+  }
+}
     button {
         width: 200px;
         height: 50px;
