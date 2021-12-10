@@ -11,7 +11,7 @@ html {
     margin: auto;
     scroll-behavior: smooth;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    background: #3b5998;
+    background: #1d1d1d;
     @media (max-width: 1450px){
         font-size: 70%;
     }  

@@ -1,19 +1,20 @@
-
+// styled
 import styled from "styled-components";
 
+// router
+import { Link } from 'react-router-dom';
 
 const Game = ({ title, description, platforms, id, image, link, genre, release }) => {
 
     return (
         <StyledGame id={id}>
-            <a href={link} target="_blank">
-                <img src={image} />
+            <Link to={`/games/${id}`}>
+                <img src={image} alt=""/>
                 <h3>{title}</h3>
-                <p>{description}</p>
                 <h5>{release}</h5>
                 <h5>{platforms}</h5>
                 <h5>{genre}</h5>
-            </a>
+            </Link>
         </StyledGame>
         
     );
@@ -25,10 +26,11 @@ background: #1c2841a4;
 box-shadow: 4px 4px 20px #0000006e;
 border-radius: 12px;
 padding: 12px;
-&:hover{
-            transform: scale(1.1);
-            transition: 0.3s;
-        }
+transition: 0.3s;
+    &:hover{
+        transform: scale(1.02);
+        transition: 0.3s;
+    }
     a   {
         color: #ffffff;
         width: 100%;

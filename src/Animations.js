@@ -1,4 +1,4 @@
-import { addScaleCorrection } from "framer-motion";
+
 
 export const pageAnimations = {
     hidden: {

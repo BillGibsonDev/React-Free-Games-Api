@@ -1,31 +1,10 @@
-import { useState } from 'react';
 
-// ....
-import axios from 'axios';
-
-// components
-import Video from '../components/Video.js';
 
 // styled
 import styled from "styled-components";
 
 const WatchPage = () => {
 
-
-    const [ videos, setVideos ] = useState([]);
-
-    function getVideos() {
-        axios.get('https://api.twitch.tv/helix/games?name=Pokemon', {
-        headers: {
-            'Authorization': 'Bearer ' + 'n7dgjwch0slx3wpjz014f31hn0a60h',
-            'Client-Id': 'p4sxkzlo10rvkbhmf0lhtwdydtxrv5'
-        }})
-        .then((response) => {
-            setVideos(response);
-            console.log(response);
-        })
-      };
-    
 
   
 return(

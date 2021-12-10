@@ -10,10 +10,10 @@ import Logo from '../images/gamepad.png';
 
 
 const Nav = () => {
-// hides / shows nav bar on scroll down / up
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
+    // hides / shows nav bar on scroll down / up
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("nav").style.top = "0";
   } else {
@@ -24,7 +24,7 @@ window.onscroll = function() {
 
     return(
         <StyledNav id="nav">
-            <h3>Free The Games <img src={Logo} id="logo"/></h3>
+            <h3>Free The Games <img src={Logo} id="logo" alt=""/></h3>
             <nav id="nav">
                 <Link to='/'>Home</Link>
                 <Link to='/WatchPage'>Watch</Link>
@@ -40,40 +40,40 @@ display: flex;
 align-items: center;
 justify-content: space-around;
 position: sticky;
-background: white;
+background: #1d72f7;
 padding: 1em 0;
 border-bottom-left-radius: 12px;
 border-bottom-right-radius: 12px;
 z-index: 99;
-h3{
-    font-size: 2.5em;
-    color: black;
-}
-#logo {
-    width: 40px;
-    @media (max-width: 950px){
-        width: 25px;
-      } 
-}
-nav {
-    display: flex;
-    width: 30%;
-    justify-content: space-between;
-    margin-left: 1em;
-    @media (max-width: 950px){
-        width: 50%;
-      }
-    a {
-        font-size: 2em;
-        color: black;
-        font-weight: bold;
-        letter-spacing: 1px;
-        transition: 0.3s;
-        &:hover{
-            transform: scale(1.2);
+    h3{
+        font-size: 2.5em;
+        color: #ffffff;
+    }
+    #logo {
+        width: 40px;
+        @media (max-width: 950px){
+            width: 25px;
+        } 
+    }
+    nav {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        margin-left: 1em;
+        @media (max-width: 950px){
+            width: 50%;
+        }
+        a {
+            font-size: 2em;
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.2);
+            }
         }
     }
-}
 `;
 
 export default Nav;
