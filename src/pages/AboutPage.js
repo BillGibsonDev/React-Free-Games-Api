@@ -35,7 +35,6 @@ margin: auto;
         position: relative;
         top: 10%;
         @media (max-width: 1050px){
-            width: 90%;
             margin: auto;
             top: 5%;
         } 
@@ -45,13 +44,15 @@ margin: auto;
     }
     .textContainer {
         width: 100%;
-        height: 90%;
+        height: 70%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         @media (max-width: 1050px){
             flex-direction: column;
             height: 80%;
+            justify-content: flex-start;
+            margin-top: 10%;
         }
         p {
             width: 50%;
@@ -74,9 +75,9 @@ margin: auto;
         }
         img {
             border-radius: 12px;
-            width: 540px;
+            width: 50%;
             margin-left: 10px;
-            @media (max-width: 950px){
+            @media (max-width: 1050px){
                 width: 90%;
                 margin: 0;
             } 

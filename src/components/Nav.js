@@ -93,13 +93,10 @@ margin: 0 auto;
         }
             nav {
                 display: flex;
-                width: 10%;
+                width: 15%;
                 justify-content: space-between;
-                @media (max-width: 1450px){
-                    width: 15%;
-                }
                 @media (max-width: 1050px){
-                    width: 25%;
+                    width: 20%;
                 }
                 @media (max-width: 750px){
                     width: 30%;
