@@ -85,6 +85,9 @@ height: 100%;
 font-size: 1em;
 width: 80%;
 margin: auto;
+  @media (max-width: 1250px){
+      width: 100%;
+  } 
   .landing-wrapper {
   display: flex;
   flex-direction: column;
@@ -95,8 +98,14 @@ margin: auto;
       margin: 3% auto;
       grid-row-gap: 5em;
       grid-column-gap: 2em;
-      width: 90%;
-      @media (max-width: 950px){
+      width: 100%;
+      @media (max-width: 1350px){
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @media (max-width: 1050px){
+        grid-template-columns: 1fr 1fr;
+      } 
+      @media (max-width: 650px){
         grid-template-columns: 1fr;
         font-size: 2em;
         grid-row-gap: 1em;
@@ -113,6 +122,8 @@ margin: auto;
         color: white;
         transition: 0.1s;
         font-size: 2em;
+        font-weight: 700;
+        letter-spacing: 1px;
           @media (max-width: 950px){
             grid-template-columns: 1fr;
             font-size: 2em;
@@ -121,6 +132,7 @@ margin: auto;
           &:hover{
               transform: scale(1.02);
               border: 2px white solid;
+              color: black;
           }
         }
     }

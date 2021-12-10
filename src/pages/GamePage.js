@@ -70,16 +70,20 @@ const GamePage = () => {
                     <div className="info-wrapper">
                         <h2>Info</h2>
                         <div className="info-container">
+                            <a href={data.game_url} target="_blank" rel="noreferrer"><span>Store Link: </span>{data.game_url}</a>
                             <h5><span>Developer: </span>{data.developer}</h5>
+                            <h5><span>Publisher: </span>{data.publisher}</h5>
                             <h5><span>Genre: </span>{data.genre}</h5>
                             <h5><span>Released: </span>{data.release_date}</h5>
                             <h5><span>Platform: </span>{data.platform}</h5>
-                            <h5><span>Publisher: </span>{data.publisher}</h5>
                             <h5><span>Status: </span>{data.status}</h5>
-                            <a href={data.game_url} target="_blank" rel="noreferrer"><span>Store Link: </span>{data.game_url}</a>
                         </div>
                     </div>
-                    <div className="system-req-wrapper">
+                    {
+                        data.minimum_system_requirements === undefined ? (
+                            <h4>No known system requirements!</h4>
+                        ):(
+                        <div className="system-req-wrapper">
                         <h2>System Requirements</h2>
                         <div className="system-req-container">
                             <h5><span>Operating System: </span>{data.minimum_system_requirements.os}</h5>
@@ -89,6 +93,8 @@ const GamePage = () => {
                             <h5><span>Memory: </span>{data.minimum_system_requirements.memory}</h5>
                         </div>
                     </div>
+                    )
+                    }
                 </div>
                 <div className="screenshot-container">
                     <h2>Screenshots</h2>
@@ -105,9 +111,17 @@ const GamePage = () => {
 
 const StyledGamePage = styled(motion.div)`
 min-height: 80vh;
+width: 90%;
+margin: auto;
+    @media (max-width: 1250px){
+        width: 100%;
+    }
     .game-wrapper {
         width: 90%;
         margin: 5% auto;
+        @media (max-width: 1250px){
+            width: 100%;
+        }
         header{
             display: flex;
             width: 100%;
@@ -117,6 +131,11 @@ min-height: 80vh;
             h1 {
                 font-size: 5em;
                 color: white;
+                border-bottom: 2px solid white;
+                width: 40%;
+                @media (max-width: 550px){
+                    width: 60%;
+                }
             }
             #back-button {
             position: relative;
@@ -141,8 +160,14 @@ min-height: 80vh;
                 width: 100%;
                 justify-content: space-between;
                 margin-bottom: 5%;
+                @media (max-width: 800px){
+                    flex-direction: column;
+                }
                 img {
                     width: 40%;
+                    @media (max-width: 800px){
+                        width: 100%;
+                    }
                 }
             }
             p {
@@ -155,8 +180,12 @@ min-height: 80vh;
                 line-height: 1.5; 
                 width: 50%;
                 height: 100%;
+                @media (max-width: 800px){
+                    width: 100%;
+                    font-size: 2em;
+                }
                 span {
-                    color: #d6d6d6;
+                    color: #386ad4;
                 }
             }
         }
@@ -164,14 +193,15 @@ min-height: 80vh;
             display: flex;
             height: 100%;
             .info-wrapper, .system-req-wrapper {
-                margin: 2em 0;
-                width: 50%;
+                margin: 2em auto;
+                width: 45%;
                 height: 100%;
                 h2 {
                     color: white;
                     font-size: 2em;
                     border-bottom: 2px solid white;
-                    width: 40%;
+                    width: 80%;
+                    letter-spacing: 1px;
                 }
                 .info-container, .system-req-container {
                     width: 100%;
@@ -184,16 +214,22 @@ min-height: 80vh;
                         letter-spacing: 1px;
                         line-height: 1.5; 
                         span {
-                            color: #d6d6d6;
+                            color: #386ad4;
                         }
                     }
                     h5 {
                         font-size: 2em;
+                        @media (max-width: 800px){
+                            font-size: 1.5em;
+                        }
                     }
                     a {
                         font-size: 2em;
+                        @media (max-width: 800px){
+                            font-size: 1.5em;
+                        }
                         &:hover{
-                            color: black;
+                            color: #386ad4;
                         }
                     }
                 }
@@ -202,7 +238,10 @@ min-height: 80vh;
         .screenshot-container {
             width: 70%;
             margin: 5% auto;
-
+            @media (max-width: 800px){
+                margin-bottom: 10%;
+                width: 90%;
+            }
             h2 {
                 font-size: 3em;
                 color: white;

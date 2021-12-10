@@ -17,9 +17,9 @@ export default function SimpleSlider({images}) {
       {
           images.map((image, key) =>{
               return(
-                <>
+                <div className="slider-wrapper" key={key}>
                   <img key={key} src={image.image} alt="" />
-                </>
+                </div>
               )
           })
       }

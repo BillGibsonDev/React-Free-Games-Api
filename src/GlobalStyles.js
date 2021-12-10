@@ -14,10 +14,15 @@ html {
     background: #1d1d1d;
     @media (max-width: 1450px){
         font-size: 70%;
+        width: 90%;
     }  
-    @media (max-width: 750px){
-       font-size: 50%;
-  }
+    @media (max-width: 1050px){
+        font-size: 60%;
+        width: 90%;
+    }
+}
+h1, h2, h3, h4, h5, h6, a , label, button, p {
+    letter-spacing: 1px;
 }
 ul {
     list-style-type: none;

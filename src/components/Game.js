@@ -4,7 +4,7 @@ import styled from "styled-components";
 // router
 import { Link } from 'react-router-dom';
 
-const Game = ({ title, description, platforms, id, image, link, genre, release }) => {
+const Game = ({ title, platforms, id, image, genre, release }) => {
 
     return (
         <StyledGame id={id}>
@@ -22,14 +22,16 @@ const Game = ({ title, description, platforms, id, image, link, genre, release }
 const StyledGame = styled.div`
 display: flex;
 flex-direction: column;
-background: #1c2841a4;
+background: #1d72f7;
+border: 2px #1d72f7 solid;
 box-shadow: 4px 4px 20px #0000006e;
 border-radius: 12px;
 padding: 12px;
 transition: 0.3s;
     &:hover{
         transform: scale(1.02);
-        transition: 0.3s;
+        transition: 0.1s;
+        border: 2px white solid;
     }
     a   {
         color: #ffffff;

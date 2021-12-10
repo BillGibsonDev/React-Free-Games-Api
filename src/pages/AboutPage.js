@@ -24,58 +24,64 @@ const StyledAboutPage = styled(motion.div)`
 height: 80vh;
 width: 80%;
 margin: auto;
-h1 {
-    font-size: 4em;
-    border-bottom: 4px solid black;
-    width: 60%;
-    color: white;
-    position: relative;
-    top: 10%;
-    margin: auto 1em;
-    @media (max-width: 950px){
-        width: 80%;
-        margin: auto;
-        top: 5%;
-      } 
-}
-.textContainer {
-    width: 100%;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media (max-width: 950px){
-        flex-direction: column;
-        height: 80%;
+    @media (max-width: 1050px){
+        width: 100%;
     }
-    p {
-        width: 50%;
-        font-size: 2em;
+    h1 {
+        font-size: 4em;
+        border-bottom: 4px white solid;
+        width: 60%;
         color: white;
-        @media (max-width: 950px){
-        width: 90%;
-        margin: 2em 0;
-      } 
-      @media (max-width: 450px){
-        font-size: 2.5em;
-      } 
-        a {
-            text-decoration: underline;
-            color: white;
-            &:hover{
-                color: #6969c7ce;
-            }
+        position: relative;
+        top: 10%;
+        @media (max-width: 1050px){
+            width: 90%;
+            margin: auto;
+            top: 5%;
+        } 
+        @media (max-width: 1050px){
+            font-size: 3em;
         }
     }
-    img {
-        border-radius: 12px;
-        width: 540px;
-        margin-left: 10px;
-        @media (max-width: 950px){
-        width: 90%;
-      } 
+    .textContainer {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 1050px){
+            flex-direction: column;
+            height: 80%;
+        }
+        p {
+            width: 50%;
+            font-size: 2em;
+            color: white;
+            @media (max-width: 1050px){
+                width: 90%;
+                margin: 2em 0;
+            } 
+            @media (max-width: 450px){
+                font-size: 2.5em;
+            } 
+            a {
+                text-decoration: underline;
+                color: white;
+                &:hover{
+                    color: #6969c7ce;
+                }
+            }
+        }
+        img {
+            border-radius: 12px;
+            width: 540px;
+            margin-left: 10px;
+            @media (max-width: 950px){
+                width: 90%;
+                margin: 0;
+            } 
+        }
     }
-}
 `;
 
 export default AboutPage;

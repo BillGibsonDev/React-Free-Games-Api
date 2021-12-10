@@ -33,27 +33,32 @@ const Footer = () => {
 
 const StyledFooter = styled.div `
 height: 20vh;
-width: 100%;
+width: 80%;
+margin: auto;
 background: #1d72f7;
 display: flex;
 align-items: center;
 justify-content: space-around;
 border-top-left-radius: 12px;
 border-top-right-radius: 12px;
-    @media (max-width: 920px){
+@media (max-width: 1250px){
+        width: 100%;
+    }
+    @media (max-width: 1020px){
         flex-direction: column;
-        height: 30vh;
     }
     .widthContainer{
       width: 70%;
       display: flex;
       justify-content: space-between; 
+      align-items: center;
         @media (max-width: 920px){
             flex-direction: column;
+            width: 90%;
         }
         .iconContainer {
             display: flex;
-            width: 30%;
+            width: 50%;
             align-items: center;
             @media (max-width: 920px){
                 width: 90%;
@@ -62,15 +67,19 @@ border-top-right-radius: 12px;
             }
             img {
                 margin: 0 10px;
-                width: 50px;
+                width: 30px;
+                border-radius: 12px;
                 &:hover {
-                    transform: scale(1.2);
-                    transition: 0.3s;
+                    transform: scale(1.05);
+                    transition: 0.1s;
+                    border: 2px black solid;
+                    background: black;
                 }
             }
         }
         form {
             width: 50%;
+            height: 100%;
             display: flex;
             align-items: center;
             @media (max-width: 920px){
@@ -80,7 +89,7 @@ border-top-right-radius: 12px;
             }
             input {
                 width: 70%;
-                height: 60px;
+                height: 30px;
                 text-align: center;
                 font-size: 12px;
                 font-weight: bold;
@@ -96,7 +105,7 @@ border-top-right-radius: 12px;
             }
             button {
                 width: 25%;
-                height: 60px;
+                height: 30px;
                 border: none;
                 margin-left: 2px;
                 font-size: 1.2em;
@@ -107,6 +116,8 @@ border-top-right-radius: 12px;
                 cursor: pointer;
                 transition: 0.1s;
                 color: white;
+                letter-spacing: 1px;
+                border: 2px #1f1f1f solid;
                 &:hover{
                     border: 2px white solid;
                 }
