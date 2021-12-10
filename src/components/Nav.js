@@ -24,6 +24,10 @@ const Nav = () => {
         prevScrollpos = currentScrollPos;
     }
 
+    function handleHomeScroll(){
+        window.scrollTo(0, 0);
+    }
+
     return(
         <StyledNav id="nav">
             <div className="nav-wrapper">
@@ -33,7 +37,7 @@ const Nav = () => {
                 </div>
                 
                 <nav id="nav">
-                    <Link to='/'>Home</Link>
+                    <Link to='/' onClick={handleHomeScroll}>Home</Link>
                     <Link to="/AboutPage">About</Link>
                 </nav>
             </div>
