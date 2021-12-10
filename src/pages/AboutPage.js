@@ -21,11 +21,11 @@ const AboutPage = () => {
 }
 
 const StyledAboutPage = styled(motion.div)`
-height: 80vh;
+min-height: 80vh;
 width: 80%;
-margin: auto;
+margin: 5% auto;
     @media (max-width: 1050px){
-        width: 100%;
+        width: 90%;
     }
     h1 {
         font-size: 4em;
@@ -35,11 +35,10 @@ margin: auto;
         position: relative;
         top: 10%;
         @media (max-width: 1050px){
-            margin: auto;
             top: 5%;
-        } 
-        @media (max-width: 1050px){
-            font-size: 3em;
+        }
+        @media (max-width: 750px){
+            width: 90%;
         }
     }
     .textContainer {
@@ -48,18 +47,19 @@ margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin: 5em 0;
         @media (max-width: 1050px){
             flex-direction: column;
             height: 80%;
             justify-content: flex-start;
-            margin-top: 10%;
+            margin: 5em 0;
         }
         p {
             width: 50%;
             font-size: 2em;
             color: white;
             @media (max-width: 1050px){
-                width: 90%;
+                width: 100%;
                 margin: 2em 0;
             } 
             @media (max-width: 450px){
@@ -78,7 +78,7 @@ margin: auto;
             width: 50%;
             margin-left: 10px;
             @media (max-width: 1050px){
-                width: 90%;
+                width: 100%;
                 margin: 0;
             } 
         }

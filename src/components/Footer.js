@@ -34,15 +34,16 @@ const Footer = () => {
 const StyledFooter = styled.div `
 height: 20vh;
 width: 80%;
-margin: auto;
+margin: 2em auto;
 background: #1d72f7;
 display: flex;
 align-items: center;
 justify-content: space-around;
 border-top-left-radius: 12px;
 border-top-right-radius: 12px;
-@media (max-width: 1250px){
+    @media (max-width: 1250px){
         width: 100%;
+        height: 22vh
     }
     @media (max-width: 1020px){
         flex-direction: column;
