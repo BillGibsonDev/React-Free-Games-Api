@@ -12,7 +12,7 @@ const AboutPage = () => {
     return(
         <StyledAboutPage variants={pageAnimations} initial="hidden" animate='show' exit="exit">
             <h1>About Free The Games</h1>
-            <div className="textContainer">
+            <div className="text-container">
                 <p>Free The Games Website is built using <a href="https://www.freetogame.com/api-doc">Free to Game API</a>. I found this API while scouring the internet for a website to built an came across this API. This is meant to be a proof of concept but also a great resource to find new games that have the added benefit of being free!  I hope this serves you well! Happy gaming!</p>
                 <img src={AboutImage} alt="" />
             </div>
@@ -25,7 +25,7 @@ min-height: 80vh;
 width: 80%;
 margin: 5% auto;
     @media (max-width: 1050px){
-        width: 90%;
+        width: 100%;
     }
     h1 {
         font-size: 4em;
@@ -34,6 +34,7 @@ margin: 5% auto;
         color: white;
         position: relative;
         top: 10%;
+        margin: 0;
         @media (max-width: 1050px){
             top: 5%;
         }
@@ -41,7 +42,7 @@ margin: 5% auto;
             width: 90%;
         }
     }
-    .textContainer {
+    .text-container {
         width: 100%;
         height: 70%;
         display: flex;
