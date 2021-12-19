@@ -11,8 +11,8 @@ import Github from '../images/githubWhite.png';
 const Footer = () => {
     return (
         <StyledFooter>
-            <div className="widthContainer">
-                <div className="iconContainer">
+            <div className="width-container">
+                <div className="icon-container">
                     <a href="https://www.linkedin.com/in/bill-gibson-868182104/" target="_blank" rel="noreferrer"><img src={Linkedin} alt="company linkedin link"/></a>
                     <a href="https://facebook.com" target="_blank" rel="noreferrer"><img src={Facebook} alt="company facebook link"/></a>
                     <a href="https://twitter.com/DevGibby" target="_blank" rel="noreferrer"><img src={Twiiter} alt="company twitter link"/></a>
@@ -48,7 +48,7 @@ border-top-right-radius: 12px;
     @media (max-width: 1020px){
         flex-direction: column;
     }
-    .widthContainer{
+    .width-container{
       width: 70%;
       display: flex;
       justify-content: space-between; 
@@ -57,7 +57,7 @@ border-top-right-radius: 12px;
             flex-direction: column;
             width: 90%;
         }
-        .iconContainer {
+        .icon-container {
             display: flex;
             width: 50%;
             align-items: center;

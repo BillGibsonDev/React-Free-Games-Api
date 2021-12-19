@@ -55,7 +55,7 @@ const LandingPage = () => {
             <Loader />
           ):(
             <div className="landing-wrapper">
-              <div className="gameList">
+              <div className="game-list">
                 {
                   data.slice(0,value).map((data, key) => {
                     return (
@@ -92,7 +92,7 @@ margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-    .gameList {
+    .game-list {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       margin: 3% auto;
